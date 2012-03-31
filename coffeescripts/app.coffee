@@ -7,7 +7,7 @@ process = (job, done) ->
     progressMax = 100
     next = (i) ->
         console.log "#{job.data.title}(#{job.data.id}) [#{i}/#{progressMax}]"
-        job.progress i, 100
+        job.progress i, progressMax
         if i == progressMax
             done()
         else
